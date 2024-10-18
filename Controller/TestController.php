@@ -1,7 +1,7 @@
 <?php
-
-class TestController{
+require_once '../App/Controller.php';
+class TestController extends Controller {
     public function show(){
-        echo "I'm in the controller";
+        $this->view('test', ['name'=>'Dasun']);
     }
 }
