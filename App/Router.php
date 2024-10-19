@@ -1,8 +1,8 @@
 <?php
-
+namespace App;
 class Router
 {
-    public static function handle($method = 'GET', $path = '/', $controller = '', $action=null)
+    public static function handle($method = 'GET', $path = '/', $controller = '', $action = null)
     {
         $currentMethod = $_SERVER['REQUEST_METHOD'];
         $currentUri = $_SERVER['REQUEST_URI'];
@@ -16,36 +16,37 @@ class Router
             if (is_callable($controller)) {
                 $controller();
             } else {
-                require_once '../Controller/' . $controller . '.php';
-                $controller = new $controller;
-                $controller->$action();
+                // Use the fully qualified namespace for the controller
+                $controllerClass = 'Controller\\' . $controller;
+                $controllerInstance = new $controllerClass;
+                $controllerInstance->$action();
             }
             exit();
         }
         return false;
     }
 
-    public static function get($path = '/', $controller = '', $action=null)
+    public static function get($path = '/', $controller = '', $action = null)
     {
         return self::handle('GET', $path, $controller, $action);
     }
 
-    public static function post($path = '/', $controller = '', $action=null)
+    public static function post($path = '/', $controller = '', $action = null)
     {
         return self::handle('POST', $path, $controller, $action);
     }
 
-    public static function patch($path = '/', $controller = '', $action=null)
+    public static function patch($path = '/', $controller = '', $action = null)
     {
         return self::handle('PATCH', $path, $controller, $action);
     }
 
-    public static function put($path = '/', $controller = '', $action=null)
+    public static function put($path = '/', $controller = '', $action = null)
     {
         return self::handle('PUT', $path, $controller, $action);
     }
 
-    public static function delete($path = '/', $controller = '', $action=null)
+    public static function delete($path = '/', $controller = '', $action = null)
     {
         return self::handle('DELETE', $path, $controller, $action);
     }

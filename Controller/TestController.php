@@ -1,19 +1,21 @@
 <?php
 
-require_once '../App/Controller.php';
-require_once '../Model/Student.php';
+namespace Controller;
+
+use Model\Student;
 
 class TestController extends Controller
 {
-    protected PDO $pdo;
-
-    public function show()
+    public function show(): void
     {
         $student = new Student($this->pdo);
-        $student->store([
-            'name'=>'Sunil',
-        ]);
-//        var_dump($data);
-        $this->view('test', ['name' => 'Dasun']);
+
+        $student->update(3, ['name'=>'Jane']);
+
+
+//        $student->delete(4);
+
+        $students = $student->getAll();
+        $this->view('test', ['students' => $students]);
     }
 }

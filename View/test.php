@@ -1,3 +1,2 @@
 <?php
-
-echo "Hello " . $data['name'];
+print_r($data['students']);

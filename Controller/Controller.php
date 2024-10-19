@@ -1,8 +1,11 @@
 <?php
 
-class Controller
-{
+namespace Controller;
 
+use PDO;
+
+abstract class Controller
+{
     protected PDO $pdo;
 
     public function __construct()
@@ -12,6 +15,7 @@ class Controller
 
     protected function view($filename = '', $data = [])
     {
-        require_once "../View/$filename.php";
+        require_once __DIR__ . '/../View/' . $filename . '.php';
     }
+
 }
