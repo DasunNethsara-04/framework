@@ -12,7 +12,7 @@ class InitEnv
     public static function load(): void
     {
         // This loads the .env file located in the current directory (__DIR__)
-        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
         $dotenv->load();
         // DB info using $_ENV
         define('DB_HOST', $_ENV['DB_HOST']);
