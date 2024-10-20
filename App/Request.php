@@ -4,22 +4,31 @@ namespace App;
 
 class Request
 {
-    public function get_method()
+    /**
+     * @return mixed
+     */
+    public function get_method(): mixed
     {
         return $_SERVER['REQUEST_METHOD'];
     }
 
-    public function get_uri()
+    /**
+     * @return mixed
+     */
+    public function get_uri(): mixed
     {
         return $_SERVER['REQUEST_URI'];
     }
 
-    public function get_headers()
+    public function get_headers(): false|array
     {
         return getallheaders();
     }
 
-    public function get_body()
+    /**
+     * @return array|mixed
+     */
+    public function get_body(): mixed
     {
         // Return JSON-decoded body content if Content-Type is JSON
         if ($this->get_header('Content-Type') === 'application/json') {
@@ -31,10 +40,10 @@ class Request
     public function get_header($header)
     {
         $headers = $this->get_headers();
-        return isset($headers[$header]) ? $headers[$header] : null;
+        return $headers[$header] ?? null;
     }
 
-    public function query_params()
+    public function query_params(): array
     {
         return $_GET;
     }
