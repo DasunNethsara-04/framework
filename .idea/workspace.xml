@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="787ca2b6-578b-454d-bf8a-c5593ba1ef8b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/App/Includes/Security.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Config/CORS.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <workItem from="1729272496928" duration="2622000" />
       <workItem from="1729309295971" duration="6722000" />
       <workItem from="1729343031073" duration="4178000" />
-      <workItem from="1729436001125" duration="4403000" />
+      <workItem from="1729436001125" duration="5143000" />
     </task>
     <servers />
   </component>
