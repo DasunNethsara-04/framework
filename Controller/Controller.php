@@ -10,7 +10,7 @@ abstract class Controller
 
     public function __construct()
     {
-        $this->pdo = new PDO("mysql:host=localhost;dbname=mvc;", 'root', '');
+        $this->pdo = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";", DB_USER, DB_PASS);
     }
 
     protected function view($filename = '', $data = [])

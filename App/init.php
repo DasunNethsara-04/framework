@@ -1,7 +1,7 @@
 <?php
 namespace App;
 
-use App\Router;
+InitEnv::load();
 
 
 Router::get('/test', 'TestController', 'show');

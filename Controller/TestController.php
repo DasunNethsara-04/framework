@@ -12,10 +12,7 @@ class TestController extends Controller
 
         $student->update(3, ['name'=>'Jane']);
 
-
-//        $student->delete(4);
-
         $students = $student->getAll();
-        $this->view('test', ['students' => $students]);
+        $this->view('welcome');
     }
 }
