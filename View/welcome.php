@@ -32,7 +32,7 @@
         <h2>How to Get Started</h2>
         <p>To start building with <?php echo APP_NAME; ?>, follow the steps below:</p>
         <ul>
-            <li><strong>Step 1:</strong> Review the <a href="#">documentation</a> to familiarize yourself with the
+            <li><strong>Step 1:</strong> Review the <a href="https://github.com/DasunNethsara-04/zenithphp?tab=readme-ov-file#readme">documentation</a> to familiarize yourself with the
                 framework's structure.
             </li>
             <li><strong>Step 2:</strong> Configure your environment by editing the <code>.env</code> file and setting up
@@ -48,7 +48,7 @@
                 are working properly.
             </li>
         </ul>
-        <a href="#" class="btn btn-primary">View Documentation</a>
+        <a href="https://github.com/DasunNethsara-04/zenithphp?tab=readme-ov-file#readme" class="btn btn-primary">View Documentation</a>
     </div>
 </section>
 
@@ -57,7 +57,7 @@
     <div class="container">
         <p>This framework is designed to make building web applications simple and efficient. Get started with
             controllers, routes, and models, and extend the framework to meet your application's needs.</p>
-        <p>If you need more guidance, check the <a href="#">documentation</a> or reach out to the community for help.
+        <p>If you need more guidance, check the <a href="https://github.com/DasunNethsara-04/zenithphp?tab=readme-ov-file#readme">documentation</a> or reach out to the community for help.
         </p>
     </div>
 </section>
