@@ -22,12 +22,12 @@ To get started with ZenithPHP, follow the instructions below:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/DasunNethsara-04/zenithphp.git
+    https://github.com/ZenithPHP-Framework/framework.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd zenithphp
+    cd framework
     ```
 
 3. Install dependencies using Composer:
