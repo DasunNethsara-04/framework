@@ -70,12 +70,17 @@ To create your first route:
 
     class WelcomeController {
         public function index() {
-            echo "Welcome to ZenithPHP!";
+            $this->view('welcome');
         }
     }
     ```
 
-3. Visit `http://localhost:8000/welcome` to see the result.
+3. Now, create a new view file inside `View/welcome.php`:
+    ```html
+    <h1>Welcome to ZenithPHP</h1>
+    ```
+
+4. Visit `http://localhost:8000/welcome` to see the result.
 
 ## Security Features
 
