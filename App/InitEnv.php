@@ -23,5 +23,6 @@ class InitEnv
         // App info using $_ENV
         define('APP_NAME', $_ENV['APP_NAME']);
         define('APP_URL', $_ENV['APP_URL']);
+        define('APP_VERSION', $_ENV['APP_VERSION']);
     }
 }
