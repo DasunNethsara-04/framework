@@ -1,7 +1,7 @@
-<div style="text-align: center;">
+<p align="center">
     <img src="https://github.com/user-attachments/assets/ab329545-9c44-4e85-aabe-6f4dc0f0512c" alt="icon-192" width="192" height="192">
-</div>
-    <h1 style="text-align: center">ZenithPHP</h1>
+</p>
+    <h1 align="center">ZenithPHP</h1>
 
 Welcome to **ZenithPHP**, a simple and lightweight PHP framework designed to streamline web application development.
 ZenithPHP follows the MVC (Model-View-Controller) architecture and provides developers with a clean and flexible
