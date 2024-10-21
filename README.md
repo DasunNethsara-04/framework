@@ -1,5 +1,7 @@
-# ZenithPHP Framework
 
+![icon-192](https://github.com/user-attachments/assets/ab329545-9c44-4e85-aabe-6f4dc0f0512c)
+
+# ZenithPHP
 Welcome to **ZenithPHP**, a simple and lightweight PHP framework designed to streamline web application development. ZenithPHP follows the MVC (Model-View-Controller) architecture and provides developers with a clean and flexible foundation to build modern PHP applications with ease.
 
 ## Features
