@@ -2,23 +2,16 @@
 
 namespace App;
 
-use App\Exceptions\ExceptionHandler;
-use App\Exceptions\NotFoundException;
-use App\Exceptions\ServerErrorException;
-use App\Exceptions\UnauthorizedException;
 
 InitEnv::load();
 
 
-//try {
 Router::get('/', 'TestController', 'show');
-//} catch (NotFoundException $e) {
-//    ExceptionHandler::handle($e);
-//} catch (UnauthorizedException $e) {
-//    ExceptionHandler::handle($e);
-//} catch (ServerErrorException $e) {
-//    ExceptionHandler::handle($e);
-//} catch (\Exception $e) {
-//    // Generic catch for any other exceptions
-//    ExceptionHandler::handle($e);
-//}
+Router::get('/test', 'TestController', 'test');
+Router::post('/testpost', 'TestController', 'testpost');
+
+// students
+Router::get('/students', 'StudentController', 'index');
+Router::post('/students/add', 'StudentController', 'store');
+Router::put('/students/update/{id}', 'StudentController', 'update');
+Router::delete('/students/delete/{id}', 'StudentController', 'delete');
