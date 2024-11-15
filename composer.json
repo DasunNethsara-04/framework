@@ -30,7 +30,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "php -r \"$envFile = '.env'; if (file_exists($envFile)) { $content = file_get_contents($envFile); $projectName = basename(getcwd()); $content = preg_replace('/^APP_NAME=.*/m', 'APP_NAME=' . $projectName, $content); file_put_contents($envFile, $content); echo 'Updated APP_NAME in .env file.'; }\""
+            "php -r \"echo 'Enter your APP_NAME: '; $appName = trim(fgets(STDIN)); echo 'Enter your DB_NAME: '; $dbName = trim(fgets(STDIN)); echo 'Enter your DB_HOST (default: localhost): '; $dbHost = trim(fgets(STDIN)); if (empty($dbHost)) { $dbHost = 'localhost'; } echo 'Enter your DB_USER (default: root): '; $dbUser = trim(fgets(STDIN)); if (empty($dbUser)) { $dbUser = 'root'; } echo 'Enter your DB_PASS (default: empty): '; $dbPass = trim(fgets(STDIN)); $envFile = '.env'; if (file_exists($envFile)) { $content = file_get_contents($envFile); $content = preg_replace('/^APP_NAME=.*/m', 'APP_NAME=' . $appName, $content); $content = preg_replace('/^DB_NAME=.*/m', 'DB_NAME=' . dbName, $content); $content = preg_replace('/^DB_HOST=.*/m', 'DB_HOST=' . $dbHost, $content); $content = preg_replace('/^DB_USER=.*/m', 'DB_USER=' . $dbUser, $content); $content = preg_replace('/^DB_PASS=.*/m', 'DB_PASS=' . $dbPass, $content); file_put_contents($envFile, $content); echo 'Updated .env file with the provided values.'; }\""
         ]
     }
 }
